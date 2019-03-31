@@ -111,6 +111,7 @@ void parse_file ( char * filename,
        xvals+1, yvals+1, zvals+1);
       add_box(polygons, xvals[0], yvals[0], zvals[0],
         xvals[1], yvals[1], zvals[1]);
+      print_matrix(polygons);
     }//end of box
 
     else if ( strncmp(line, "sphere", strlen(line)) == 0 ) {

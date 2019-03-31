@@ -31,6 +31,7 @@ void add_polygon( struct matrix *polygons,
   add_point(polygons, x0, y0, z0);
   add_point(polygons, x1, y1, z1);
   add_point(polygons, x2, y2, z2);
+  print_matrix(polygons);
 }
 
 /*======== void draw_polygons() ==========
@@ -85,6 +86,7 @@ void add_box( struct matrix * polys,
               double x, double y, double z,
               double width, double height, double depth ) {
   double x0, y0, z0, x1, y1, z1;
+
   x0 = x;
   x1 = x+width;
   y0 = y;
