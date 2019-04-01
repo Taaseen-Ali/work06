@@ -15,6 +15,11 @@ int main(int argc, char **argv) {
   struct matrix * edges;
   struct matrix * polygons;
   struct matrix * transform;
+  color c;
+  c.red = 0;
+  c.green = 255;
+  c.blue = 255;
+
 
   edges = new_matrix(4, 4);
   polygons = new_matrix(4, 4);
@@ -27,11 +32,12 @@ int main(int argc, char **argv) {
   /* print_matrix(make_rotZ(M_PI/4)); */
   /* printf("\n"); */
 
+
   if ( argc == 2 )
     parse_file( argv[1], transform, edges, polygons, s );
   else
     parse_file( "stdin", transform, edges, polygons, s );
-
+  
   free_matrix( edges );
   free_matrix( polygons );
   free_matrix( transform );
